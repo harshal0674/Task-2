@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, Variants } from "framer-motion";
 import StateVisualizer from "../components/StateVisualizer";
 import { Loader2, Play, RefreshCw, UploadCloud, Search, Sparkles, BrainCircuit } from "lucide-react";
 
@@ -43,7 +43,7 @@ export default function Home() {
   };
 
   // Animation variants
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     show: {
       opacity: 1,
@@ -51,7 +51,7 @@ export default function Home() {
     }
   };
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { opacity: 0, y: 20 },
     show: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 300, damping: 24 } }
   };
